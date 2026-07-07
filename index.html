@@ -3,16 +3,45 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta http-equiv="refresh" content="0; url=01-login.html">
-  <title>Agent 广告素材生产平台 Demo</title>
+  <title>Agent 广告素材生产平台</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="auth-page">
-  <main class="auth-side" style="min-height:100vh">
-    <section class="auth-card">
-      <h2>正在进入 Demo...</h2>
-      <p class="sub">如果没有自动跳转，请点击下方按钮。</p>
-      <button class="primary" onclick="location.href='01-login.html'">进入产品 Demo</button>
+  <main class="auth-main">
+    <section class="auth-hero">
+      <span class="hero-chip">Agent 驱动的广告素材生产平台</span>
+      <h1>从产品大图到可交互 Demo</h1>
+      <p>先看整体框架，再进入运营视角的素材生产链路。</p>
+      <div class="hero-ghost">
+        <div class="ghost-line"></div>
+        <div class="ghost-line short"></div>
+        <div class="ghost-line"></div>
+      </div>
+    </section>
+
+    <section class="auth-side">
+      <div class="auth-card wide">
+        <h2>选择你要查看的内容</h2>
+        <p class="sub">建议面试展示顺序：先讲产品大图，再演示 Demo 主链路。</p>
+        <div class="space-list">
+          <button class="space-card workspace-button" onclick="location.href='product-map/index.html'">
+            <span class="space-logo">图</span>
+            <span>
+              <span class="space-name">产品大图</span>
+              <span class="space-meta">整体框架、流程、应用层与基建层</span>
+            </span>
+            <span class="enter">查看</span>
+          </button>
+          <button class="space-card workspace-button" onclick="location.href='01-login.html'">
+            <span class="space-logo">Demo</span>
+            <span>
+              <span class="space-name">交互 Demo</span>
+              <span class="space-meta">从登录、Agent 工作台到投放复盘</span>
+            </span>
+            <span class="enter">进入</span>
+          </button>
+        </div>
+      </div>
     </section>
   </main>
 </body>
