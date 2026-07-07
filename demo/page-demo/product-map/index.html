@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Agent 驱动的广告素材生产平台整体产品框架" />
+    <title>Agent 驱动的广告素材生产平台整体框架</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="poster-scroll" aria-labelledby="poster-title">
+      <article class="poster">
+        <header class="poster-header">
+          <span class="title-rule" aria-hidden="true"></span>
+          <h1 id="poster-title">Agent 驱动的广告素材生产平台整体框架</h1>
+        </header>
+
+        <section class="flow-row" aria-label="业务流程">
+          <div class="section-label section-label-flow">流程</div>
+          <ol id="flow-track" class="flow-track"></ol>
+        </section>
+
+        <section class="layer-row application-row" aria-labelledby="application-title">
+          <h2 id="application-title" class="section-label section-label-app">应用层</h2>
+          <div id="application-grid" class="application-grid"></div>
+        </section>
+
+        <div class="bridge" aria-hidden="true">
+          <span></span><i></i><i></i><i></i><i></i>
+        </div>
+
+        <section class="layer-row foundation-row" aria-labelledby="foundation-title">
+          <h2 id="foundation-title" class="section-label section-label-foundation">基建层</h2>
+          <div class="foundation-layout">
+            <div id="access-stack" class="access-stack"></div>
+            <div id="capability-stack" class="capability-stack"></div>
+            <div id="governance-stack" class="governance-stack"></div>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <script src="data/product-map.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
