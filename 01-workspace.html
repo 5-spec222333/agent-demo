@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>选择工作空间｜营销素材 Agent</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-page" data-page="workspace">
+  <header class="auth-top">
+    <div class="brand"><span class="brand-mark">A</span>营销素材 Agent</div>
+    <button class="text-link" type="button" data-open-dialog="help-dialog">帮助中心</button>
+  </header>
+  <main class="auth-main">
+    <section class="auth-hero">
+      <span class="hero-chip">面向运营的素材生产工作台</span>
+      <h1>选择本次要处理运营任务的团队</h1>
+      <p>不同工作空间拥有独立的商品、素材和待办</p>
+    </section>
+    <section class="auth-side">
+      <div class="auth-card wide">
+        <div class="account-line">
+          <div><h2>选择工作空间</h2><p class="sub">选择你本次要处理运营任务的团队</p></div>
+          <div class="account"><span class="avatar">林</span><span>林晓<br><button class="text-link inline-button" id="logout" type="button">退出登录</button></span></div>
+        </div>
+        <input class="search" id="workspace-search" placeholder="搜索团队或品牌">
+        <div class="workspace-actions"><button class="text-link inline-button" type="button" data-open-dialog="invite-dialog">＋ 输入邀请码加入工作空间</button><button class="text-link inline-button" type="button" data-open-dialog="apply-dialog">申请加入工作空间</button></div>
+        <p class="form-message" id="workspace-message"></p>
+        <div class="space-list" id="space-list">
+          <div class="space-card" data-search="星河女装增长团队 星河女装"><span class="space-logo">星</span><div><div class="space-name">星河女装增长团队</div><div class="space-meta">星河女装 · 运营负责人</div><div class="space-meta">2个待确认方案 · 3个待审核素材 · 今天09:42</div></div><button class="enter" type="button" data-enter-workspace="星河女装增长团队">进入</button></div>
+          <div class="space-card" data-search="夏日活动临时项目组 星河女装"><span class="space-logo">夏</span><div><div class="space-name">夏日活动临时项目组</div><div class="space-meta">星河女装 · 协作运营</div><div class="space-meta">暂无待办 · 昨天18:20</div></div><button class="enter" type="button" data-enter-workspace="夏日活动临时项目组">进入</button></div>
+          <div class="space-card disabled" data-search="集团品牌中台 星河集团"><span class="space-logo">集</span><div><div class="space-name">集团品牌中台</div><div class="space-meta">星河集团 · 申请成员</div></div><button class="pending-button" type="button" id="pending-info">权限审批中</button></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="auth-footer"><button class="footer-link" data-open-dialog="legal-dialog" type="button">隐私政策</button>｜<button class="footer-link" data-open-dialog="legal-dialog" type="button">用户协议</button>｜ Demo v1.0</footer>
+
+  <dialog id="help-dialog"><h3>帮助中心</h3><p>选择可用的工作空间进入 Agent 工作台；审批中的空间暂不可进入。</p><button class="primary" type="button" data-close-dialog>知道了</button></dialog>
+  <dialog id="legal-dialog"><h3>协议说明</h3><p>当前为产品演示页面，不会连接真实工作空间。</p><button class="primary" type="button" data-close-dialog>关闭</button></dialog>
+  <dialog id="invite-dialog"><form id="invite-form"><h3>输入邀请码</h3><div class="field"><label for="invite-code">团队邀请码</label><input id="invite-code" placeholder="输入任意邀请码即可演示"></div><p class="form-message" id="invite-message"></p><div class="dialog-actions"><button class="secondary" type="button" data-close-dialog>取消</button><button class="primary" type="submit">确认加入</button></div></form></dialog>
+  <dialog id="apply-dialog"><form id="apply-form"><h3>申请加入工作空间</h3><div class="field"><label for="apply-name">工作空间名称</label><input id="apply-name" placeholder="例如：新品增长项目组"></div><div class="field"><label for="apply-reason">申请理由</label><input id="apply-reason" placeholder="请输入申请理由"></div><p class="form-message" id="apply-message"></p><div class="dialog-actions"><button class="secondary" type="button" data-close-dialog>取消</button><button class="primary" type="submit">提交申请</button></div></form></dialog>
+  <dialog id="pending-dialog"><h3>权限审批中</h3><p>集团品牌中台正在审批你的申请，审批通过后即可进入。</p><button class="primary" type="button" data-close-dialog>知道了</button></dialog>
+  <script src="auth.js"></script>
+</body>
+</html>
+
