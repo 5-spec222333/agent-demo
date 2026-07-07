@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>方案确认</title><link rel="stylesheet" href="styles.css"></head>
+<body data-page="plan">
+<main class="product-shell">
+  <aside class="sidebar">
+    <div class="workspace"><span class="brand-mark">星</span><div><strong>星河女装增长团队</strong><small>运营负责人⌄</small></div></div>
+    <button class="new-task" data-href="02-agent-workbench.html">＋ 新建素材任务</button>
+    <button class="nav-item nav-button" data-href="02-agent-workbench.html">Agent 工作台</button><button class="nav-item nav-button" data-href="04-task-center.html"><span>任务中心</span><span class="badge">1</span></button><button class="nav-item nav-button" data-href="05-review.html"><span>审核与返工</span><span class="badge">3</span></button><button class="nav-item nav-button" data-href="06-material-library.html">素材库</button><button class="nav-item nav-button" data-href="07-launch-center.html"><span>投放中心</span><span class="badge">2</span></button><button class="nav-item nav-button" data-href="08-data-analysis.html">数据分析</button>
+    <div class="nav-title">最近对话</div><div class="recent-empty">暂无最近对话</div><button class="nav-item nav-button recent" data-conversation="current" hidden>夏季女装10条拉新视频</button>
+    <div class="sidebar-foot"><div class="user-line"><span class="avatar">林</span><strong>林晓</strong></div></div>
+  </aside>
+
+  <section class="page-content">
+    <div class="page-title-row"><div><h1>夏季女装10条拉新视频</h1><p>方案 v1　·　Agent 正在生成可确认的生产中间产物</p></div><span class="soft-label" id="plan-status">需求理解待确认</span></div>
+    <div class="flow-tabs">
+      <button class="flow-step" data-plan-tab="requirement">1 需求理解</button>
+      <button class="flow-step" data-plan-tab="selection-strategy">2 选品策略</button>
+      <button class="flow-step" data-plan-tab="product-list">3 商品 List</button>
+      <button class="flow-step" data-plan-tab="image-creative">4 图片创意方案</button>
+      <button class="flow-step" data-plan-tab="video-structure">5 视频创意结构</button>
+      <button class="flow-step" data-plan-tab="storyboard-script">6 分镜脚本</button>
+      <button class="flow-step" data-plan-tab="video-components">7 视频组件</button>
+      <button class="flow-step" data-plan-tab="task-config">8 配置与任务确认</button>
+    </div>
+
+    <div class="plan-step-panel" data-plan-step="requirement">
+      <div class="info-banner">Agent已把运营原始表达转成结构化需求。先确认“做什么、给谁看、投到哪里、承接到哪里”。</div>
+      <div class="content-head"><h2>需求理解</h2></div>
+      <div class="summary-box"><div class="summary-line"><span>业务目标</span><strong>新客拉新</strong></div><div class="summary-line"><span>素材类型</span><strong>竖屏视频</strong></div><div class="summary-line"><span>生成数量</span><strong>10条</strong></div><div class="summary-line"><span>数量含义</span><strong>10个商品，每个商品1条</strong></div><div class="summary-line"><span>选品范围</span><strong>夏季女装</strong></div><div class="summary-line"><span>投放渠道</span><strong>品牌自有频道</strong></div><div class="summary-line"><span>目标人群</span><strong>泛夏装新客</strong></div><div class="summary-line"><span>承接方式</span><strong>对应商品详情页</strong></div><div class="summary-line"><span>视频规格</span><strong>9:16 · 15秒</strong></div></div>
+      <div class="page-actions"><button class="small-secondary" data-href="02-agent-workbench.html">返回修改需求</button><button class="small-primary" data-plan-goto="selection-strategy">确认需求，生成选品策略</button></div>
+    </div>
+
+    <div class="plan-step-panel" data-plan-step="selection-strategy" hidden>
+      <div class="info-banner">Agent先生成选品策略，再生成商品 List。商品不是凭空挑选，而是服务“拉新”和“夏季场景”。</div>
+      <div class="content-head"><h2>选品策略</h2></div>
+      <div class="product-grid">
+        <article class="product-card"><strong>拉新优先</strong><div class="product-meta">优先选择新客容易理解、价格门槛低、卖点直观的商品。</div></article>
+        <article class="product-card"><strong>夏季场景优先</strong><div class="product-meta">优先选择清凉、通勤、防晒、显瘦等夏季强场景商品。</div></article>
+        <article class="product-card"><strong>素材资产完整</strong><div class="product-meta">优先选择商品图、模特图、详情页信息完整的商品。</div></article>
+        <article class="product-card"><strong>承接链路清楚</strong><div class="product-meta">每个商品必须有明确承接页，避免点击后无法转化。</div></article>
+        <article class="product-card"><strong>内容不重复</strong><div class="product-meta">10条视频覆盖不同商品和不同创意角度，避免批量同质化。</div></article>
+      </div>
+      <div class="page-actions"><button class="small-secondary" data-plan-goto="requirement">返回需求理解</button><button class="small-primary" data-plan-goto="product-list">进入下一步</button></div>
+    </div>
+
+    <div class="plan-step-panel" data-plan-step="product-list" hidden>
+      <div class="info-banner">以下商品由选品策略生成，并绑定推荐理由、主卖点、创意方向和承接页。</div>
+      <div class="content-head"><h2>商品 List <small>已选 10/10</small></h2></div>
+      <div class="task-table">
+        <div class="task-table-head"><span>商品</span><span>推荐理由</span><span>主卖点</span><span>创意方向</span><span>承接页</span></div>
+        <div class="task-table-row"><strong>冰丝通勤衬衫</strong><span>夏季通勤场景强</span><span>清爽、不贴身、显瘦</span><span>通勤痛点</span><span>商品详情页</span></div>
+        <div class="task-table-row"><strong>法式收腰连衣裙</strong><span>新客点击兴趣高</span><span>显瘦、优惠、约会通勤都可穿</span><span>利益直给</span><span>商品详情页</span></div>
+        <div class="task-table-row"><strong>轻薄防晒开衫</strong><span>夏季防晒需求强</span><span>轻薄、防晒、百搭</span><span>场景种草</span><span>商品详情页</span></div>
+        <div class="task-table-row"><strong>高腰垂感阔腿裤</strong><span>适合搭配内容</span><span>显高、修饰腿型</span><span>搭配对比</span><span>商品详情页</span></div>
+      </div>
+      <p class="form-message success">已生成10个商品的生产清单，当前仅展示核心样例。</p>
+      <div class="page-actions"><button class="small-secondary" data-plan-goto="selection-strategy">返回选品策略</button><button class="small-primary" data-plan-goto="image-creative">进入下一步</button></div>
+    </div>
+
+    <div class="plan-step-panel" data-plan-step="image-creative" hidden>
+      <div class="info-banner">视频生产前先准备图片创意方案，作为视频镜头和组件的画面来源。</div>
+      <div class="content-head"><h2>图片创意方案</h2></div>
+      <div class="product-grid">
+        <article class="product-card"><div class="product-pic">主</div><strong>商品主视觉</strong><div class="product-meta">用于视频开头和商品展示镜头。</div><div class="recommend">风格：清爽浅色背景，突出商品上身效果。</div></article>
+        <article class="product-card"><div class="product-pic">景</div><strong>场景图</strong><div class="product-meta">用于通勤、约会、出游等画面场景。</div><div class="recommend">风格：地铁口、办公室、街区等夏季真实场景。</div></article>
+        <article class="product-card"><div class="product-pic">卖</div><strong>卖点图</strong><div class="product-meta">用于展示清爽、防晒、显瘦、优惠等卖点。</div><div class="recommend">文案：短句突出，不超过两层信息。</div></article>
+      </div>
+      <div class="page-actions"><button class="small-secondary" data-plan-goto="product-list">返回商品 List</button><button class="small-primary" data-plan-goto="video-structure">进入下一步</button></div>
+    </div>
+
+    <div class="plan-step-panel" data-plan-step="video-structure" hidden>
+      <div class="info-banner">视频创意结构决定每条视频的叙事顺序，分镜脚本会基于结构继续展开。</div>
+      <div class="content-head"><h2>视频创意结构 <small id="video-structure-count">已分配 10/10 条</small></h2></div>
+      <div class="product-grid">
+        <article class="product-card"><div class="product-pic">痛</div><strong>痛点开场型</strong><div class="product-meta">痛点 → 商品出现 → 卖点解释 → 场景证明 → CTA</div><div class="recommend">适用：通勤衬衫、防晒开衫。</div><label class="count-control">条数 <input class="structure-count-input" type="number" min="0" max="10" value="4"> 条</label></article>
+        <article class="product-card"><div class="product-pic">利</div><strong>利益直给型</strong><div class="product-meta">优惠信息 → 商品展示 → 上身效果 → 购买理由 → CTA</div><div class="recommend">适用：连衣裙、套装。</div><label class="count-control">条数 <input class="structure-count-input" type="number" min="0" max="10" value="3"> 条</label></article>
+        <article class="product-card"><div class="product-pic">比</div><strong>搭配对比型</strong><div class="product-meta">普通穿法 → 优化搭配 → 效果对比 → 商品推荐 → CTA</div><div class="recommend">适用：半裙、T恤。</div><label class="count-control">条数 <input class="structure-count-input" type="number" min="0" max="10" value="3"> 条</label></article>
+      </div>
+      <p class="form-message success" id="video-structure-message">当前合计10条，可以进入下一步。</p>
+      <div class="page-actions"><button class="small-secondary" data-plan-goto="image-creative">返回图片创意方案</button><button class="small-primary" data-plan-goto="storyboard-script">进入下一步</button></div>
+    </div>
+
+    <div class="plan-step-panel" data-plan-step="storyboard-script" hidden>
+      <div class="info-banner">分镜脚本把视频创意结构拆成镜头级输入，后续每个镜头都能定位、重试和审核。</div>
+      <div class="content-head"><h2>分镜脚本 <small>示例：冰丝通勤衬衫</small></h2></div>
+      <div class="task-table">
+        <div class="task-table-head"><span>镜头</span><span>作用</span><span>画面</span><span>字幕/口播</span><span>时长</span></div>
+        <div class="task-table-row"><strong>镜头1</strong><span>痛点吸引</span><span>高温通勤场景</span><span>30°C 通勤怎么穿？</span><span>0-2s</span></div>
+        <div class="task-table-row"><strong>镜头2</strong><span>商品出现</span><span>模特上身冰丝衬衫</span><span>清爽不闷，还显瘦</span><span>2-5s</span></div>
+        <div class="task-table-row"><strong>镜头3</strong><span>卖点解释</span><span>面料和版型特写</span><span>透气、不贴身、不显臃肿</span><span>5-8s</span></div>
+        <div class="task-table-row"><strong>镜头4</strong><span>场景证明</span><span>办公室/地铁通勤</span><span>上班穿也干净利落</span><span>8-11s</span></div>
+        <div class="task-table-row"><strong>镜头5</strong><span>优惠提醒</span><span>商品和价格信息</span><span>新客限时优惠</span><span>11-13s</span></div>
+        <div class="task-table-row"><strong>镜头6</strong><span>转化引导</span><span>商品详情页入口</span><span>点击查看同款</span><span>13-15s</span></div>
+      </div>
+      <div class="page-actions"><button class="small-secondary" data-plan-goto="video-structure">返回视频创意结构</button><button class="small-primary" data-plan-goto="video-components">进入下一步</button></div>
+    </div>
+
+    <div class="plan-step-panel" data-plan-step="video-components" hidden>
+      <div class="info-banner">视频不是直接由一句 Prompt 生成，而是由商品、画面、文案、声音、品牌和承接组件组合生产。</div>
+      <div class="content-head"><h2>视频组件</h2></div>
+      <div class="product-grid">
+        <article class="product-card"><strong>商品组件</strong><div class="product-meta">商品图、商品标题、价格、商品卖点。</div><div class="recommend">来源：商品库。</div></article>
+        <article class="product-card"><strong>画面组件</strong><div class="product-meta">模特图、场景图、商品特写、背景图。</div><div class="recommend">来源：图片创意方案与素材库。</div></article>
+        <article class="product-card"><strong>文案组件</strong><div class="product-meta">字幕、口播文案、CTA文案。</div><div class="recommend">来源：分镜脚本。</div></article>
+        <article class="product-card"><strong>声音组件</strong><div class="product-meta">TTS配音、BGM。</div><div class="recommend">来源：频道规则与品牌规范。</div></article>
+        <article class="product-card"><strong>品牌组件</strong><div class="product-meta">Logo、品牌色、字体规范。</div><div class="recommend">来源：品牌资产库。</div></article>
+        <article class="product-card"><strong>承接组件</strong><div class="product-meta">商品详情页、活动页、跳转按钮。</div><div class="recommend">来源：承接页配置。</div></article>
+      </div>
+      <div class="page-actions"><button class="small-secondary" data-plan-goto="storyboard-script">返回分镜脚本</button><button class="small-primary" data-plan-goto="task-config">进入下一步</button></div>
+    </div>
+
+    <div class="plan-step-panel" data-plan-step="task-config" hidden>
+      <div class="info-banner">这是创建任务前的最后一步。Agent把业务方案转成模型和工程链路可执行的任务配置。</div>
+      <div class="content-head"><h2>配置与任务确认</h2></div>
+      <h3 class="subsection-title">配置生成</h3>
+      <div class="summary-box"><div class="summary-line"><span>商品配置</span><strong>10个商品ID · 每个商品1条视频</strong></div><div class="summary-line"><span>创意配置</span><strong>痛点开场4条、利益直给3条、搭配对比3条</strong></div><div class="summary-line"><span>分镜配置</span><strong>6镜脚本 · 15秒 · 9:16</strong></div><div class="summary-line"><span>组件配置</span><strong>商品、画面、字幕、TTS、BGM、Logo、承接页</strong></div><div class="summary-line"><span>审核配置</span><strong>商品一致性、品牌规范、承接页有效</strong></div><div class="summary-line"><span>异常配置</span><strong>支持局部重试，失败返回对应环节</strong></div></div>
+      <h3 class="subsection-title">任务配置</h3>
+      <div class="summary-box"><div class="summary-line"><span>任务名称</span><strong>夏季女装10条拉新视频</strong></div><div class="summary-line"><span>生产类型</span><strong>视频批量生产</strong></div><div class="summary-line"><span>生产数量</span><strong>10条视频</strong></div><div class="summary-line"><span>生产链路</span><strong>图片生成 → 视频生成 → 字幕/TTS/BGM → 工程合成 → 质检</strong></div><div class="summary-line"><span>入库策略</span><strong>审核通过后自动进入素材库</strong></div></div>
+      <div class="page-actions"><button class="small-secondary" data-plan-goto="video-components">返回视频组件</button><button class="small-primary" data-href="04-task-center.html">创建生产任务</button></div>
+    </div>
+  </section>
+
+  <aside class="summary-side">
+    <h2>方案摘要</h2><div class="status" id="summary-step">当前步骤：需求理解</div>
+    <h3>需求信息</h3><div class="summary-box"><div class="summary-line"><span>业务目标</span><strong>新客拉新</strong></div><div class="summary-line"><span>素材类型</span><strong>竖屏视频</strong></div><div class="summary-line"><span>数量</span><strong>10条</strong></div><div class="summary-line"><span>规格</span><strong>9:16 · 15秒</strong></div><div class="summary-line"><span>目标人群</span><strong>泛夏装新客</strong></div></div>
+    <h3>当前产物</h3><div class="summary-box"><div class="summary-line"><span>中间产物</span><strong id="summary-artifact">需求理解</strong></div><div class="summary-line"><span>方案版本</span><strong>v1</strong></div></div>
+    <h3>下一步</h3><div class="summary-box" id="summary-next">确认需求后，Agent将生成选品策略。</div>
+    <button class="secondary" data-href="02-agent-workbench.html">返回 Agent 讨论</button><button class="secondary" data-open-dialog="version-dialog">查看历史版本</button>
+  </aside>
+</main>
+
+<dialog id="plan-review-dialog" class="plan-review-dialog"><h3 id="plan-review-title">审核修改</h3><p class="product-meta">第2步按文本修改；第3-7步按Schema字段修改，保持原有结构不被打散。</p><textarea id="plan-review-text" readonly></textarea><div id="plan-review-schema" class="plan-schema-editor" hidden></div><p class="form-message" id="plan-review-message"></p><div class="dialog-actions"><button class="secondary" type="button" id="plan-regenerate">重新生成</button><button class="secondary" type="button" id="plan-manual-edit">人工修改</button><button class="primary" type="button" id="plan-save-edit">保存</button><button class="secondary" type="button" data-close-dialog>关闭</button></div></dialog>
+<dialog id="version-dialog"><h3>方案历史版本</h3><p>v1 · 当前版本 · 林晓 · 刚刚保存</p><button class="primary" data-close-dialog>关闭</button></dialog>
+<script src="workflow.js"></script>
+</body>
+</html>

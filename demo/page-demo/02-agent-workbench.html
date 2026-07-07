@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Agent 工作台</title><link rel="stylesheet" href="styles.css"></head>
+<body data-page="workbench">
+<main class="workbench simple-workbench">
+  <aside class="sidebar">
+    <button class="workspace workspace-button" data-href="01-workspace.html"><span class="brand-mark">星</span><span><strong>星河女装增长团队</strong><small>运营负责人⌄</small></span></button>
+    <button class="new-task" id="new-agent-task">＋ 新建素材任务</button>
+    <button class="nav-item nav-button active" data-href="02-agent-workbench.html">Agent 工作台</button><button class="nav-item nav-button" data-href="04-task-center.html"><span>任务中心</span><span class="badge">1</span></button><button class="nav-item nav-button" data-href="05-review.html"><span>审核与返工</span><span class="badge">3</span></button><button class="nav-item nav-button" data-href="06-material-library.html">素材库</button><button class="nav-item nav-button" data-href="07-launch-center.html"><span>投放中心</span><span class="badge">2</span></button><button class="nav-item nav-button" data-href="08-data-analysis.html">数据分析</button>
+    <div class="nav-title">最近对话</div><div class="recent-empty" id="recent-empty">暂无最近对话</div><button class="nav-item nav-button recent" id="recent-current-conversation" data-conversation="current" hidden>夏季女装10条拉新视频</button>
+    <div class="sidebar-foot"><div class="user-line"><span class="avatar">林</span><div><strong>林晓</strong><br><button class="inline-button" data-open-dialog="workbench-help">帮助中心</button> · <button class="inline-button" data-open-dialog="notice-dialog">消息</button></div></div></div>
+  </aside>
+
+  <section class="main-panel">
+    <div class="main-head"><strong class="workbench-page-title">Agent 工作台</strong></div>
+    <div class="welcome simplified-welcome">
+      <h1 id="workbench-title">上午好，林晓。今天想制作什么营销素材？</h1>
+      <p id="workbench-subtitle">直接告诉我业务目标，我会帮你补全需求、推荐商品并推进素材生产。</p>
+
+      <div id="conversation-history" class="agent-result conversation-history" hidden>
+        <div class="conversation-heading"><strong id="conversation-title"></strong><span>历史对话</span></div>
+        <div class="user-bubble" id="history-user-message"></div><div class="agent-bubble" id="history-agent-message"></div>
+        <div class="user-bubble" id="history-user-confirm"></div><div class="agent-bubble" id="history-agent-result"></div>
+      </div>
+
+      <div id="agent-result" class="agent-result" hidden>
+        <div id="conversation-log" class="conversation-log"></div>
+        <div id="requirement-summary" class="agent-bubble requirement-summary" hidden>
+          <h3>需求理解已完成，请确认</h3>
+          <div class="summary-box"><div class="summary-line"><span>业务目标</span><strong>新客拉新</strong></div><div class="summary-line"><span>素材类型</span><strong>竖屏视频</strong></div><div class="summary-line"><span>生成数量</span><strong>10条</strong></div><div class="summary-line"><span>数量含义</span><strong id="summary-distribution"></strong></div><div class="summary-line"><span>选品范围</span><strong>夏季女装</strong></div><div class="summary-line"><span>投放渠道</span><strong id="summary-channel"></strong></div><div class="summary-line"><span>目标人群</span><strong id="summary-audience"></strong></div><div class="summary-line"><span>承接方式</span><strong id="summary-landing"></strong></div><div class="summary-line"><span>视频规格</span><strong>9:16 · 15秒</strong></div></div>
+          <div class="requirement-actions"><button class="small-primary" id="confirm-agent-plan" data-href="03-plan-confirmation.html?step=requirement">确认需求，生成生产方案</button><button class="small-secondary" type="button" id="modify-agent-requirement" data-open-dialog="requirement-edit-dialog">修改需求</button></div>
+        </div>
+      </div>
+
+      <div class="prompt-box demo-prompt-box">
+        <textarea id="agent-prompt" aria-label="需求输入">从夏季女装中选择合适商品，生成10条竖屏拉新视频，用于拉新。</textarea>
+        <div class="prompt-tools"><input id="agent-file" type="file" hidden><button class="tool" id="attach-file">＋ 附件</button><button class="tool" data-append-prompt="选品范围：夏季女装；">选择商品</button><button class="tool" data-append-prompt="承接活动：清凉一夏女装活动页；">选择活动</button><button class="tool" data-append-prompt="投放渠道：短视频信息流；">选择渠道</button><button class="send" id="send-agent-request" aria-label="提交需求">↑</button></div>
+        <p class="form-message" id="workbench-message"></p>
+      </div>
+    </div>
+  </section>
+</main>
+<dialog id="requirement-edit-dialog" class="requirement-edit-dialog"><form id="requirement-edit-form"><h3>修改已确认需求</h3><p class="product-meta">修改后将更新当前需求摘要，不会重新开始对话。</p><div class="edit-requirement-grid"><div class="field"><label>业务目标</label><input value="新客拉新" disabled></div><div class="field"><label>素材类型</label><input value="10条竖屏视频" disabled></div><div class="field"><label>商品与版本</label><select id="edit-distribution"><option>10个商品，每个商品1条</option><option>少量商品，10个创意版本</option></select></div><div class="field"><label>投放渠道</label><select id="edit-channel"><option>短视频信息流</option><option>品牌自有频道</option></select></div><div class="field"><label>目标人群</label><select id="edit-audience"><option>25—35岁通勤女装新客</option><option>泛夏装新客</option></select></div><div class="field"><label>承接页面</label><select id="edit-landing"><option>清凉一夏女装活动页</option><option>对应商品详情页</option></select></div></div><div class="field"><label>补充说明</label><textarea id="edit-note" placeholder="例如：优惠信息需要在前3秒出现"></textarea></div><div class="dialog-actions"><button class="secondary" type="button" data-close-dialog>取消</button><button class="primary" type="submit">保存修改</button></div></form></dialog>
+<dialog id="workbench-help"><h3>工作台帮助</h3><p>提交示例需求后，Agent会追问缺失信息，并引导你进入方案确认。</p><button class="primary" data-close-dialog>关闭</button></dialog>
+<dialog id="notice-dialog" class="team-message-dialog"><div class="chat-head"><div><strong>星河女装增长团队</strong><span>3人在线 · 工作组沟通</span></div><button class="chat-close" type="button" data-close-dialog>×</button></div><div class="team-message-list" id="team-message-list"><div class="chat-row"><span class="chat-avatar">周</span><div><span class="chat-name">周然</span><p class="chat-bubble">如果这批视频确认生产，我来同步活动页排期。</p></div></div><div class="chat-row"><span class="chat-avatar">陈</span><div><span class="chat-name">陈露</span><p class="chat-bubble">品牌Logo安全区我已经更新，可以在审核时重点看镜头4。</p></div></div></div><div class="chat-input-bar"><textarea id="team-message-input" placeholder="输入消息，和工作组同步进展"></textarea><button class="primary" type="button" id="send-team-message">发送</button></div><p class="form-message" id="team-message-tip"></p></dialog>
+<script src="pages.js"></script>
+</body>
+</html>

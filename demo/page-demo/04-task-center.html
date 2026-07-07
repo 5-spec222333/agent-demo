@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>任务中心</title><link rel="stylesheet" href="styles.css"></head>
+<body data-page="tasks">
+<main class="task-shell" id="task-shell">
+  <aside class="sidebar">
+    <div class="workspace"><span class="brand-mark">星</span><div><strong>星河女装增长团队</strong><small>运营负责人⌄</small></div></div>
+    <button class="new-task" data-href="02-agent-workbench.html">＋ 新建素材任务</button>
+    <button class="nav-item nav-button" data-href="02-agent-workbench.html">Agent 工作台</button><button class="nav-item nav-button active" data-href="04-task-center.html"><span>任务中心</span><span class="badge">1</span></button><button class="nav-item nav-button" data-href="05-review.html"><span>审核与返工</span><span class="badge">3</span></button><button class="nav-item nav-button" data-href="06-material-library.html">素材库</button><button class="nav-item nav-button" data-href="07-launch-center.html"><span>投放中心</span><span class="badge">2</span></button><button class="nav-item nav-button" data-href="08-data-analysis.html">数据分析</button>
+    <div class="nav-title">最近对话</div><div class="recent-empty">暂无最近对话</div><button class="nav-item nav-button recent" data-conversation="current" hidden>夏季女装10条拉新视频</button>
+    <div class="sidebar-foot"><div class="user-line"><span class="avatar">林</span><strong>林晓</strong></div></div>
+  </aside>
+
+  <section class="page-content">
+    <div class="page-title-row"><div><h1>任务中心</h1><p>查看素材生产进度，处理需要人工判断的异常</p></div><button class="small-primary" data-href="02-agent-workbench.html">＋ 新建素材任务</button></div>
+    <div class="info-banner">已接收“配置与任务确认”生成的生产配置：10个商品、10条竖屏视频、每条6个分镜，包含图片生成、视频生成、字幕、TTS、BGM和Logo组件。</div>
+    <h2 class="section-title">我的待办</h2>
+    <div class="stat-grid todo-summary"><button class="stat-card" data-task-filter="异常"><strong>1</strong>生产异常待处理</button><button class="stat-card" data-task-filter="待审核"><strong>1</strong>任务待审核</button></div>
+    <div class="content-head recent-task-head"><h2>最近任务</h2><span class="product-meta">共5个任务</span></div>
+    <div class="task-tabs"><button class="task-tab active" data-task-filter="全部">全部</button><button class="task-tab" data-task-filter="生产中">生产中</button><button class="task-tab" data-task-filter="等待生产">等待生产</button><button class="task-tab" data-task-filter="待审核">待审核</button><button class="task-tab" data-task-filter="已完成">已完成</button></div>
+    <div class="task-filters"><input class="task-search" id="task-search" placeholder="搜索任务名称"><select class="task-filter-select" id="task-type-filter" aria-label="任务类型"><option value="全部">全部类型</option><option value="视频">视频任务</option><option value="图片">图片任务</option></select><select class="task-filter-select" id="task-status-filter" aria-label="任务状态"><option value="全部">全部状态</option><option value="生产中">生产中</option><option value="待审核">待审核</option><option value="等待生产">等待生产</option><option value="已完成">已完成</option></select><button class="filter-pill" id="task-date-filter">最近7天⌄</button></div>
+    <p class="form-message" id="task-message"></p>
+    <div class="task-table" id="task-table">
+      <div class="task-table-row"><span>任务名称</span><span>类型</span><span>进度</span><span>状态</span><span>异常</span><span>操作</span></div>
+      <div class="task-table-row" data-task="summer" data-name="夏季女装10条拉新视频" data-type="视频" data-status="生产中" data-exception="true"><div><strong>夏季女装10条拉新视频</strong><div class="product-meta">今天10:36 · 林晓</div></div><span>视频</span><div>8/10<div class="progress"><span style="width:80%"></span></div></div><span class="task-state state-producing">生产中</span><span class="warning-text">1条待处理</span><button class="mini-btn" data-open-task="summer">查看异常</button></div>
+      <div class="task-table-row" data-task="qixi" data-name="七夕活动主图制作" data-type="图片" data-status="待审核"><strong>七夕活动主图制作</strong><span>图片</span><div>20/20<div class="progress"><span style="width:100%"></span></div></div><span class="task-state state-review">待审核</span><span>无</span><button class="mini-btn" data-open-task="qixi">查看</button></div>
+      <div class="task-table-row" data-task="coupon" data-name="新客优惠券视频改版" data-type="视频" data-status="生产中"><strong>新客优惠券视频改版</strong><span>视频</span><div>3/6<div class="progress"><span style="width:50%"></span></div></div><span class="task-state state-producing">生产中</span><span>无</span><button class="mini-btn" data-open-task="coupon">查看</button></div>
+      <div class="task-table-row" data-task="commute" data-name="通勤女装商品推广" data-type="图片" data-status="等待生产"><strong>通勤女装商品推广</strong><span>图片</span><div>0/12<div class="progress"><span style="width:4%"></span></div></div><span class="task-state state-waiting">等待生产</span><span>无</span><button class="mini-btn" data-open-task="commute">查看</button></div>
+      <div class="task-table-row" data-task="sunscreen" data-name="防晒开衫主图批量改版" data-type="图片" data-status="已完成"><strong>防晒开衫主图批量改版</strong><span>图片</span><div>12/12<div class="progress"><span style="width:100%"></span></div></div><span class="task-state state-done">已完成</span><span>无</span><button class="mini-btn" data-open-task="sunscreen">查看</button></div>
+    </div>
+  </section>
+
+  <aside class="detail-side" id="task-detail">
+    <div class="detail-top"><div><h2 id="detail-title">夏季女装10条拉新视频</h2><div class="detail-status" id="detail-status">生产中 · 总体进度 8/10</div></div><button class="close-button" id="close-task-detail">×</button></div>
+    <div class="detail-summary" id="detail-summary">8条已进入审核队列，1条正在合成，1条因第4镜画面异常等待处理。<div class="product-meta">竖屏视频 · 9:16 · 15秒 · 方案v1</div></div>
+    <div class="summary-box task-config-snapshot"><div class="summary-line"><span>配置来源</span><strong>方案确认 · 第8步</strong></div><div class="summary-line"><span>生产配置</span><strong>10条视频 · 6镜/条</strong></div><div class="summary-line"><span>组件配置</span><strong>图片、视频、字幕、TTS、BGM、Logo</strong></div><div class="summary-line"><span>异常策略</span><strong>局部重试，失败返回对应环节</strong></div></div>
+    <div id="summer-detail"><div class="content-head"><h2>生产明细</h2><span class="product-meta">10条视频</span></div><div class="production-list"><div class="production-item"><span class="thumb">01</span><div><strong>冰丝通勤衬衫</strong><div class="product-meta">场景种草</div></div><span class="good">待审核</span></div><div class="production-item"><span class="thumb">02</span><div><strong>法式收腰连衣裙</strong><div class="product-meta">场景种草</div></div><span class="good">待审核</span></div><div class="production-item"><span class="thumb">06</span><div><strong>清凉亚麻西装</strong><div class="product-meta">利益点直给</div></div><span>合成中</span></div><div class="production-item"><span class="thumb">07</span><div><strong>冰丝通勤衬衫</strong><div class="product-meta">搭配对比 · 第4镜</div></div><span class="warning-text" id="retry-status">需要处理</span></div></div>
+      <div class="exception" id="task-exception"><h3>视频07 · 第4镜画面异常</h3><p id="exception-result">模特手部与服装边缘出现明显变形，系统已自动重试2次。</p><p><strong>影响范围：</strong>仅第4镜，其他镜头均已保留。</p><p><strong>Agent建议：</strong>保留其他镜头，仅重新生成第4镜。</p><div class="exception-actions"><button class="small-primary" id="retry-shot">重试第4镜</button></div></div>
+    </div>
+    <button class="secondary" data-href="03-plan-confirmation.html">查看原始方案</button><button class="secondary" data-href="02-agent-workbench.html">返回 Agent 讨论</button><button class="secondary" data-href="05-review.html">进入审核队列</button>
+  </aside>
+</main>
+<script src="workflow.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>登录｜营销素材 Agent</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-page" data-page="login">
+  <header class="auth-top">
+    <div class="brand"><span class="brand-mark">A</span>营销素材 Agent</div>
+    <button class="text-link" type="button" data-open-dialog="help-dialog">帮助中心</button>
+  </header>
+  <main class="auth-main">
+    <section class="auth-hero">
+      <span class="hero-chip">面向运营的素材生产工作台</span>
+      <h1>让运营从一句需求开始，完成素材生产与投放</h1>
+      <p>运营负责业务判断，系统负责复杂生产</p>
+      <div class="hero-ghost" aria-hidden="true"><div class="ghost-line"></div><div class="ghost-line short"></div><div class="ghost-line"></div></div>
+    </section>
+
+    <section class="auth-side">
+      <div class="auth-card">
+        <div id="login-view">
+          <h2>欢迎使用营销素材 Agent</h2>
+          <p class="sub">登录后进入你的运营工作空间</p>
+          <div class="tabs">
+            <button class="tab tab-button active" type="button" data-auth-view="account">账号登录</button>
+            <button class="tab tab-button" type="button" data-auth-view="code">验证码登录</button>
+          </div>
+
+          <form id="account-form">
+            <div class="field"><label for="account">账号</label><input id="account" value="demo@agent.com" placeholder="手机号或邮箱"></div>
+            <div class="field"><label for="password">密码</label><div class="input-action"><input id="password" value="123456" type="password" placeholder="请输入密码"><button type="button" id="toggle-password">显示</button></div></div>
+            <div class="form-row"><label><input type="checkbox" id="remember"> 记住登录状态</label><button class="text-link" type="button" data-open-dialog="forgot-dialog">忘记密码</button></div>
+            <p class="form-message" id="account-message"></p>
+            <button class="primary" id="login-button" type="submit">登录</button>
+            <button class="secondary" id="enterprise-login" type="button">企业账号登录</button>
+          </form>
+
+          <form id="code-form" hidden>
+            <div class="field"><label for="code-account">手机号或邮箱</label><input id="code-account" placeholder="请输入手机号或邮箱"></div>
+            <div class="field"><label for="login-code">验证码</label><div class="input-action"><input id="login-code" placeholder="请输入验证码"><button type="button" data-send-code="login">获取验证码</button></div></div>
+            <p class="form-message" id="code-message"></p>
+            <button class="primary" type="submit">登录</button>
+          </form>
+
+          <p class="auth-note">收到团队邀请？<button class="text-link inline-button" type="button" data-open-dialog="invite-login-dialog">通过邀请登录</button></p>
+          <p class="auth-note">还没有账号？<button class="text-link inline-button" id="show-register" type="button">立即注册</button></p>
+        </div>
+
+        <form id="register-view" hidden>
+          <h2>创建账号</h2><p class="sub">注册后进入工作空间选择</p>
+          <div class="field"><label for="register-name">姓名</label><input id="register-name" placeholder="请输入姓名"></div>
+          <div class="field"><label for="register-account">手机号或邮箱</label><input id="register-account" placeholder="请输入手机号或邮箱"></div>
+          <div class="field"><label for="register-code">验证码</label><div class="input-action"><input id="register-code" placeholder="请输入验证码"><button type="button" data-send-code="register">获取验证码</button></div></div>
+          <div class="field"><label for="register-password">密码</label><input id="register-password" type="password" placeholder="请输入密码"></div>
+          <div class="field"><label for="register-confirm">确认密码</label><input id="register-confirm" type="password" placeholder="再次输入密码"></div>
+          <label><input id="register-agree" type="checkbox"> 我已阅读并同意用户协议和隐私政策</label>
+          <p class="form-message" id="register-message"></p>
+          <button class="primary" type="submit">注册并继续</button>
+          <button class="secondary" id="back-login" type="button">返回登录</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="auth-footer"><button class="footer-link" data-open-dialog="legal-dialog" type="button">隐私政策</button>｜<button class="footer-link" data-open-dialog="legal-dialog" type="button">用户协议</button>｜ Demo v1.0</footer>
+
+  <dialog id="help-dialog"><h3>帮助中心</h3><p>演示账号：demo@agent.com<br>演示密码：123456</p><button class="primary" type="button" data-close-dialog>知道了</button></dialog>
+  <dialog id="legal-dialog"><h3>协议说明</h3><p>当前为产品演示页面，不会提交真实账号或个人信息。</p><button class="primary" type="button" data-close-dialog>关闭</button></dialog>
+  <dialog id="forgot-dialog">
+    <form id="forgot-form"><h3>重置密码</h3><div class="field"><label for="forgot-account">手机号或邮箱</label><input id="forgot-account" required></div><div class="field"><label for="forgot-code">验证码</label><div class="input-action"><input id="forgot-code" required><button type="button" data-send-code="forgot">获取验证码</button></div></div><div class="field"><label for="new-password">新密码</label><input id="new-password" type="password" required></div><p class="form-message" id="forgot-message"></p><div class="dialog-actions"><button class="secondary" type="button" data-close-dialog>取消</button><button class="primary" type="submit">确认重置</button></div></form>
+  </dialog>
+  <dialog id="invite-login-dialog">
+    <form id="invite-login-form"><h3>通过邀请登录</h3><div class="field"><label for="invite-login-code">团队邀请码</label><input id="invite-login-code" placeholder="例如：XH2026"></div><p class="form-message" id="invite-login-message"></p><div class="dialog-actions"><button class="secondary" type="button" data-close-dialog>取消</button><button class="primary" type="submit">确认并登录</button></div></form>
+  </dialog>
+  <script src="auth.js"></script>
+</body>
+</html>
+
